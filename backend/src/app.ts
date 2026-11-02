@@ -7,7 +7,12 @@ import { documentsRouter } from "./routes/documents.js";
 export function createApp() {
   const app = express();
 
-  app.use(cors());
+  const frontendOrigin = process.env.FRONTEND_ORIGIN?.trim();
+  app.use(
+    frontendOrigin
+      ? cors({ origin: frontendOrigin })
+      : cors(),
+  );
   app.use(express.json({ limit: "1mb" }));
 
   app.get("/health", (_req, res) => {

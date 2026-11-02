@@ -29,3 +29,7 @@ backend/prisma/*.db-journal
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+.neon
+
+# Local deploy secrets (never commit)
+.deploy-secrets/
