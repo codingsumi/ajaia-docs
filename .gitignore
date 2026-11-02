@@ -33,3 +33,6 @@ next-env.d.ts
 
 # Local deploy secrets (never commit)
 .deploy-secrets/
+
+.vercel
+.env*
