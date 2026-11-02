@@ -27,8 +27,9 @@ export function RequireAuth({ children }: Props) {
 
   if (!ready || !user) {
     return (
-      <div className="flex min-h-screen items-center justify-center text-sm text-stone-500">
-        Loading…
+      <div className="flex min-h-screen flex-col items-center justify-center gap-3 bg-[var(--background)]">
+        <div className="h-8 w-8 animate-pulse rounded-lg bg-teal-600/20" />
+        <p className="text-sm text-gray-500">Loading…</p>
       </div>
     );
   }
